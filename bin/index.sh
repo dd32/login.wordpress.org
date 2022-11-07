@@ -15,7 +15,7 @@ yarn wp-env start --update
 
 # Update wp configs
 yarn wp-env run cli "wp config set JETPACK_DEV_DEBUG true"
-yarn wp-env run cli "wp config set WPORG_SANDBOXED true"
+yarn wp-env run cli "wp config set WPORG_SANDBOXED 'Local Test Environment'"
 
 # Create the table for locales
 yarn wp-env run cli "wp db import wp-content/uploads/data/wporg_locales.sql"
