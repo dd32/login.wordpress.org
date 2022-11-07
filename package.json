@@ -1,0 +1,22 @@
+{
+	"name": "wporg-login",
+	"version": "0.0.0",
+	"description": "login.wordpress.org/pattern-directory website",
+	"author": "WordPress.org",
+	"license": "GPL-2.0-or-later",
+	"private": true,
+	"dependencies": {
+		"@wordpress/env": "5.5.0",
+		"@wordpress/scripts": "24.4.0",
+		"@wordpress/stylelint-config": "21.3.0"
+	},
+	"scripts": {
+		"create": "./bin/index.sh",
+		"wp-env": "wp-env",
+		"lint:php": "composer run lint",
+		"format:php": "composer run format",
+		"test:php": "wp-env run phpunit 'WP_MULTISITE=1 phpunit -c /var/www/html/wp-content/tests/phpunit/phpunit.xml --verbose'"
+	},
+	"workspaces": [
+	]
+}
